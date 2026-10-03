@@ -29,8 +29,8 @@
       <li><a href="#about" class="nav-link">Tentang</a></li>
       <li><a href="#education" class="nav-link">Pendidikan</a></li>
       <li><a href="#experience" class="nav-link">Pengalaman</a></li>
-      <li><a href="#code-reference" class="nav-link">Referensi Kode</a></li>
-      <li><a href="#certifications" class="nav-link">Sertifikasi</a></li>
+      <li><a href="#skills" class="nav-link">Keahlian</a></li>
+      <li><a href="#projects" class="nav-link">Proyek</a></li>
       <li><a href="#contact" class="nav-link">Kontak</a></li>
     </ul>
 
@@ -43,6 +43,10 @@
         <div class="color-dot" data-color="amber" title="Sunset Amber"></div>
         <div class="color-dot" data-color="rose" title="Rose Pink"></div>
       </div>
+
+      <button class="btn btn-secondary" onclick="openCVEditorModal()" title="Sunting data CV">
+        <i class="ri-edit-box-line"></i> <span class="desktop-only">Sunting CV</span>
+      </button>
 
       <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle navigation">
         <i class="ri-menu-line"></i>
@@ -81,12 +85,12 @@
               <a href="#contact" class="btn btn-primary">
                 <i class="ri-mail-send-line"></i> Hubungi Saya
               </a>
-              <a href="https://github.com/Haikals-Fikri/RentCar.git" target="_blank" class="btn btn-secondary">
-                <i class="ri-github-line"></i> GitHub RentCar
-              </a>
               <a href="#experience" class="btn btn-secondary">
-                <i class="ri-briefcase-line"></i> Pengalaman
+                <i class="ri-briefcase-line"></i> Lihat Pengalaman
               </a>
+              <button class="btn btn-secondary" onclick="openCVEditorModal()">
+                <i class="ri-user-settings-line"></i> Personalize CV
+              </button>
             </div>
           </div>
 
@@ -179,15 +183,9 @@
           <!-- Values / Highlights Grid -->
           <div class="values-grid">
             <div class="glass-card value-card">
-              <i class="ri-map-pin-user-line value-icon"></i>
-              <h4 class="value-title">KKN Kelurahan Lemoe</h4>
-              <p class="value-desc">Pengabdian masyarakat di Kelurahan Lemoe, Kecamatan Bacukiki, Kota Parepare.</p>
-            </div>
-
-            <div class="glass-card value-card">
-              <i class="ri-brain-line value-icon"></i>
-              <h4 class="value-title">Edukasi AI SMPN 7 Parepare</h4>
-              <p class="value-desc">Program kerja edukasi Artificial Intelligence bagi siswa-siswi SMP Negeri 7 ParePare.</p>
+              <i class="ri-file-code-line value-icon"></i>
+              <h4 class="value-title">Habibie Coding Club</h4>
+              <p class="value-desc">Aktif dalam divisi kesekretariatan klub pemrograman, mengelola dokumentasi dan materi tech.</p>
             </div>
 
             <div class="glass-card value-card">
@@ -199,7 +197,13 @@
             <div class="glass-card value-card">
               <i class="ri-group-line value-icon"></i>
               <h4 class="value-title">Sekretaris Pramuka</h4>
-              <p class="value-desc">Memiliki kemampuan kepemimpinan dan manajemen administrasi di Pramuka Rovers BELM.</p>
+              <p class="value-desc">Memiliki kemampuan kepemimpinan dan manajemen administrasi sebagai Sekretaris Pramuka Rovers BELM.</p>
+            </div>
+
+            <div class="glass-card value-card">
+              <i class="ri-terminal-window-line value-icon"></i>
+              <h4 class="value-title">Teknologi & Kode</h4>
+              <p class="value-desc">Mengembangkan proyek web modern, pengelolaan database, serta arsitektur informasi.</p>
             </div>
           </div>
         </div>
@@ -236,40 +240,40 @@
       </div>
     </section>
 
-
-
-    <!-- Code Reference / GitHub Showcase Section -->
-    <section class="section" id="code-reference">
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="ri-code-s-slash-line"></i> Source Code</span>
-          <h2 class="section-title">Referensi Kode & Repositori</h2>
-          <p class="section-subtitle">Proyek aplikasi dan repositori source code yang dikembangkan.</p>
+          <span class="section-tag"><i class="ri-cpu-line"></i> Kompetensi</span>
+          <h2 class="section-title">Keahlian & Kemampuan</h2>
+          <p class="section-subtitle">Kombinasi keahlian teknis pemrograman dan manajemen kesekretariatan.</p>
         </div>
 
-        <div style="max-width: 850px; margin: 0 auto;">
-          <div class="glass-card" style="padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 1.25rem;">
-              <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: hsla(var(--accent-hue), var(--accent-sat), var(--accent-light), 0.12); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">
-                <i class="ri-github-fill"></i>
-              </div>
-              <div>
-                <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.3rem;">RentCar - Car Rental System</h3>
-                <p style="color: var(--text-muted); font-size: 0.93rem; margin-bottom: 0.5rem;">
-                  Repositori source code sistem penyewaan / rental mobil (RentCar) di GitHub.
-                </p>
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                  <span class="tag-pill">GitHub Repository</span>
-                  <span class="tag-pill">RentCar</span>
-                  <span class="tag-pill">Source Code</span>
-                </div>
-              </div>
-            </div>
+        <!-- Filter buttons -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-skill-filter="all">Semua Keahlian</button>
+          <button class="filter-btn" data-skill-filter="frontend">Frontend Web</button>
+          <button class="filter-btn" data-skill-filter="backend">Backend & Database</button>
+          <button class="filter-btn" data-skill-filter="tools">Kesekretariatan & Tools</button>
+        </div>
 
-            <a href="https://github.com/Haikals-Fikri/RentCar.git" target="_blank" class="btn btn-primary" style="white-space: nowrap;">
-              <i class="ri-git-repository-line"></i> Buka Repositori GitHub
-            </a>
-          </div>
+        <div class="skills-grid" id="skills-grid-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-folder-open-line"></i> Portfolio</span>
+          <h2 class="section-title">Proyek & Hasil Karya</h2>
+          <p class="section-subtitle">Beberapa hasil karya sistem informasi dan proyek pengembangan web.</p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid-container">
+          <!-- Rendered dynamically by app.js -->
         </div>
       </div>
     </section>
@@ -303,11 +307,11 @@
           <div class="glass-card contact-info-card">
             <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem;">Informasi Kontak</h3>
             
-            <div class="contact-method" onclick="copyText('achmadhaikalfikri.14@gmail.com', 'Email')" style="cursor: pointer;">
+            <div class="contact-method" onclick="copyText('haikal.fikri@example.com', 'Email')" style="cursor: pointer;">
               <div class="contact-method-icon"><i class="ri-mail-line"></i></div>
               <div>
                 <div class="info-label">Email (Klik untuk salin)</div>
-                <div class="info-value" id="info-email-display">achmadhaikalfikri.14@gmail.com</div>
+                <div class="info-value" id="info-email-display">haikal.fikri@example.com</div>
               </div>
             </div>
 
@@ -327,11 +331,11 @@
               </div>
             </div>
 
-            <div class="social-links-bar" id="social-links-container">
-              <a href="https://github.com/Haikals-Fikri" target="_blank" class="social-link-btn" id="social-link-github" title="GitHub Achmad Haikal Fikri"><i class="ri-github-line"></i></a>
-              <a href="https://www.linkedin.com/in/achmad-haikal-fikri" target="_blank" class="social-link-btn" id="social-link-linkedin" title="LinkedIn Achmad Haikal Fikri"><i class="ri-linkedin-line"></i></a>
+            <div class="social-links-bar">
+              <a href="https://github.com" target="_blank" class="social-link-btn" title="GitHub"><i class="ri-github-line"></i></a>
+              <a href="https://linkedin.com" target="_blank" class="social-link-btn" title="LinkedIn"><i class="ri-linkedin-line"></i></a>
               <a href="https://x.com" target="_blank" class="social-link-btn" title="Twitter / X"><i class="ri-twitter-x-line"></i></a>
-              <a href="mailto:achmadhaikalfikri.14@gmail.com" class="social-link-btn" title="Kirim Email"><i class="ri-mail-open-line"></i></a>
+              <a href="mailto:haikal.fikri@example.com" class="social-link-btn" title="Kirim Email"><i class="ri-mail-open-line"></i></a>
             </div>
           </div>
 
@@ -371,7 +375,96 @@
     </div>
   </footer>
 
+  <!-- Personalize CV Drawer / Modal -->
+  <div class="modal-overlay" id="cv-editor-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="ri-user-settings-line" style="color: var(--accent-color);"></i> Personalize & Edit Data CV
+        </h3>
+        <button class="modal-close-btn" onclick="closeCVEditorModal()">&times;</button>
+      </div>
 
+      <div class="modal-body">
+        <form id="cv-editor-form" onsubmit="saveCVEditorForm(event)">
+          <div class="editor-section-title">Data Diri Achmad Haikal Fikri</div>
+          
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Nama Lengkap</label>
+              <input type="text" id="edit-name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gelar / Jabatan Utama</label>
+              <input type="text" id="edit-title" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Ringkasan Bio</label>
+            <textarea id="edit-bio" class="form-textarea" rows="3" required></textarea>
+          </div>
+
+          <div class="editor-section-title">Foto Profil</div>
+          <div class="form-group">
+            <label class="form-label">URL Foto Profil</label>
+            <input type="url" id="edit-photo-url" class="form-input" placeholder="https://example.com/profile.png">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Atau pilih file lokal</label>
+            <input type="file" id="edit-photo-file" accept="image/*" onchange="handlePhotoFileSelect(event)" class="form-input" style="padding: 0.75rem;">
+          </div>
+
+          <div id="modal-photo-preview" style="margin: 0.5rem 0 1rem; display: flex; justify-content: center; align-items: center; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); overflow: hidden;">
+            <i class="ri-user-3-line" style="font-size: 2.2rem; color: var(--text-muted);"></i>
+          </div>
+
+          <div class="editor-section-title">Kontak & Detail Informasi</div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" id="edit-email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nomor Telepon / WhatsApp</label>
+              <input type="text" id="edit-phone" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Lokasi Domisili</label>
+              <input type="text" id="edit-location" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pendidikan Terakhir</label>
+              <input type="text" id="edit-education" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Bahasa (Dipisah koma)</label>
+            <input type="text" id="edit-languages" class="form-input" required>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; justify-content: flex-end;">
+            <button type="button" class="btn btn-secondary" onclick="resetCVData()">
+              <i class="ri-refresh-line"></i> Reset Data Default
+            </button>
+            <button type="submit" class="btn btn-primary">
+              <i class="ri-save-3-line"></i> Simpan Perubahan
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">* Data tersimpan otomatis di peramban lokal Anda.</span>
+        <button class="btn btn-secondary" onclick="closeCVEditorModal()">Tutup</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Custom JavaScript File -->
   <script src="app.js"></script>

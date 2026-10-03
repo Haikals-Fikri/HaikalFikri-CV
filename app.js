@@ -7,7 +7,7 @@ const defaultCVData = {
   profile: {
     name: "Achmad Haikal Fikri",
     title: "IT & Software Developer | Tech Enthusiast",
-    photoUrl: "",
+    photoUrl: "profile.png",
     bio: "Lulusan SMK Negeri 2 Makassar yang aktif dalam pengembangan teknologi dan organisasi. Memiliki pengalaman Praktik Kerja Lapangan di Dinas Perpustakaan dan Kearsipan Provinsi Sulawesi Selatan serta berpengalaman dalam manajemen kesekretariatan organisasi di Habibie Coding Club dan Pramuka Rovers BELM.",
     email: "achmadhaikalfikri.14@gmail.com",
     phone: "+62 895-0451-17110",
@@ -727,8 +727,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const printBtn = document.getElementById("print-cv-btn");
-  if (printBtn) {
-    printBtn.addEventListener("click", () => window.print());
-  }
 });
