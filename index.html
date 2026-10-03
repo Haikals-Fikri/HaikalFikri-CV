@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio & CV | Achmad Haikal Fikri</title>
+  <meta name="description" content="Web Portofolio & CV Interaktif profesional milik Achmad Haikal Fikri - Alumni SMK Negeri 2 Makassar, Habibie Coding Club, dan Pramuka Rovers.">
+  
+  <!-- RemixIcon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Animated Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="brand-avatar" id="nav-avatar-box">AH</div>
+      <span class="user-name">Achmad Haikal Fikri</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">Tentang</a></li>
+      <li><a href="#education" class="nav-link">Pendidikan</a></li>
+      <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+      <li><a href="#code-reference" class="nav-link">Referensi Kode</a></li>
+      <li><a href="#certifications" class="nav-link">Sertifikasi</a></li>
+      <li><a href="#contact" class="nav-link">Kontak</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Accent Theme Selector -->
+      <div class="theme-picker" title="Pilih Tema Warna Accent">
+        <div class="color-dot active" data-color="cyan" title="Neon Cyan"></div>
+        <div class="color-dot" data-color="emerald" title="Emerald Green"></div>
+        <div class="color-dot" data-color="purple" title="Electric Purple"></div>
+        <div class="color-dot" data-color="amber" title="Sunset Amber"></div>
+        <div class="color-dot" data-color="rose" title="Rose Pink"></div>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle navigation">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Info Column -->
+          <div>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span id="status-text">Terbuka untuk Peluang Kerja & Proyek</span>
+            </div>
+
+            <h1 class="hero-title">
+              Halo, Saya <br>
+              <span class="gradient-text user-name">Achmad Haikal Fikri</span>
+            </h1>
+
+            <div class="hero-role-wrapper">
+              <span>Seorang</span>
+              <span class="typed-text" id="typed-role">IT & Software Developer</span>
+            </div>
+
+            <p class="hero-bio" id="hero-bio-text">
+              Lulusan SMK Negeri 2 Makassar yang aktif dalam pengembangan teknologi dan organisasi. Memiliki pengalaman Praktik Kerja Lapangan di Dinas Perpustakaan dan Kearsipan Provinsi Sulawesi Selatan serta berpengalaman dalam manajemen kesekretariatan organisasi di Habibie Coding Club dan Pramuka Rovers BELM.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">
+                <i class="ri-mail-send-line"></i> Hubungi Saya
+              </a>
+              <a href="https://github.com/Haikals-Fikri/RentCar.git" target="_blank" class="btn btn-secondary">
+                <i class="ri-github-line"></i> GitHub RentCar
+              </a>
+              <a href="#experience" class="btn btn-secondary">
+                <i class="ri-briefcase-line"></i> Pengalaman
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Avatar Card Column -->
+          <div>
+            <div class="glass-card hero-avatar-card">
+              <div class="avatar-wrapper" id="hero-avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <div class="avatar-fallback-icon" id="hero-avatar-fallback">
+                  <i class="ri-user-3-line"></i>
+                </div>
+              </div>
+
+              <h3 class="user-name" style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem;">Achmad Haikal Fikri</h3>
+              <p class="user-title" style="color: var(--accent-color); font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">IT & Software Developer</p>
+
+              <div class="hero-stats-mini">
+                <div class="mini-stat">
+                  <div class="mini-stat-val" id="stat-exp-val">PKL</div>
+                  <div class="mini-stat-lbl">Instansi Prov.</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val" id="stat-proj-val">10+</div>
+                  <div class="mini-stat-lbl">Proyek Tech</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="mini-stat-val" id="stat-code-val">100%</div>
+                  <div class="mini-stat-lbl">Dedikasi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-user-search-line"></i> Tentang Saya</span>
+          <h2 class="section-title">Profil Diri & Identitas</h2>
+          <p class="section-subtitle">Ringkasan latar belakang, informasi pribadi, dan passion pengembangan diri.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Card -->
+          <div class="glass-card about-bio-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem;">Siapa Saya?</h3>
+            <p class="about-bio-text" id="about-bio-desc">
+              Saya adalah Achmad Haikal Fikri, seorang pemuda yang berdomisili di Makassar dengan ketertarikan mendalam pada dunia pemrograman, sistem informasi, serta manajemen kesekretariatan organisasi.
+            </p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon"><i class="ri-calendar-event-line"></i></div>
+                <div>
+                  <div class="info-label">Tempat, Tanggal Lahir</div>
+                  <div class="info-value" id="about-birth">Makassar, 14 Mei 2005</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="ri-map-pin-line"></i></div>
+                <div>
+                  <div class="info-label">Lokasi Domisili</div>
+                  <div class="info-value" id="info-location">Makassar, Sulawesi Selatan</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="ri-graduation-cap-line"></i></div>
+                <div>
+                  <div class="info-label">Pendidikan Terakhir</div>
+                  <div class="info-value" id="about-edu">SMK Negeri 2 Makassar</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="ri-translate-2"></i></div>
+                <div>
+                  <div class="info-label">Bahasa</div>
+                  <div class="info-value" id="about-lang">Bahasa Indonesia & English</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Values / Highlights Grid -->
+          <div class="values-grid">
+            <div class="glass-card value-card">
+              <i class="ri-map-pin-user-line value-icon"></i>
+              <h4 class="value-title">KKN Kelurahan Lemoe</h4>
+              <p class="value-desc">Pengabdian masyarakat di Kelurahan Lemoe, Kecamatan Bacukiki, Kota Parepare.</p>
+            </div>
+
+            <div class="glass-card value-card">
+              <i class="ri-brain-line value-icon"></i>
+              <h4 class="value-title">Edukasi AI SMPN 7 Parepare</h4>
+              <p class="value-desc">Program kerja edukasi Artificial Intelligence bagi siswa-siswi SMP Negeri 7 ParePare.</p>
+            </div>
+
+            <div class="glass-card value-card">
+              <i class="ri-government-line value-icon"></i>
+              <h4 class="value-title">Pengalaman PKL</h4>
+              <p class="value-desc">Pengalaman kerja praktek di Dinas Perpustakaan dan Kearsipan Provinsi Sulawesi Selatan.</p>
+            </div>
+
+            <div class="glass-card value-card">
+              <i class="ri-group-line value-icon"></i>
+              <h4 class="value-title">Sekretaris Pramuka</h4>
+              <p class="value-desc">Memiliki kemampuan kepemimpinan dan manajemen administrasi di Pramuka Rovers BELM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-book-open-line"></i> Akademik</span>
+          <h2 class="section-title">Riwayat Pendidikan</h2>
+          <p class="section-subtitle">Perjalanan pendidikan formal dari Sekolah Dasar hingga Menengah Kejuruan.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;" id="education-history-list">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-briefcase-line"></i> Pengalaman</span>
+          <h2 class="section-title">PKL & Organisasi</h2>
+          <p class="section-subtitle">Pengalaman Praktik Kerja Lapangan dan peran kepemimpinan organisasi.</p>
+        </div>
+
+        <div class="timeline-container" id="timeline-list">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Code Reference / GitHub Showcase Section -->
+    <section class="section" id="code-reference">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-code-s-slash-line"></i> Source Code</span>
+          <h2 class="section-title">Referensi Kode & Repositori</h2>
+          <p class="section-subtitle">Proyek aplikasi dan repositori source code yang dikembangkan.</p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+          <div class="glass-card" style="padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: hsla(var(--accent-hue), var(--accent-sat), var(--accent-light), 0.12); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">
+                <i class="ri-github-fill"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.3rem;">RentCar - Car Rental System</h3>
+                <p style="color: var(--text-muted); font-size: 0.93rem; margin-bottom: 0.5rem;">
+                  Repositori source code sistem penyewaan / rental mobil (RentCar) di GitHub.
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tag-pill">GitHub Repository</span>
+                  <span class="tag-pill">RentCar</span>
+                  <span class="tag-pill">Source Code</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://github.com/Haikals-Fikri/RentCar.git" target="_blank" class="btn btn-primary" style="white-space: nowrap;">
+              <i class="ri-git-repository-line"></i> Buka Repositori GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-verified-badge-line"></i> Sertifikasi</span>
+          <h2 class="section-title">Sertifikat & Pengakuan</h2>
+          <p class="section-subtitle">Pengakuan pengalaman dari instansi dan organisasi tempat berkiprah.</p>
+        </div>
+
+        <div class="cert-grid" id="certs-grid-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="ri-chat-3-line"></i> Komunikasi</span>
+          <h2 class="section-title">Hubungi Achmad Haikal Fikri</h2>
+          <p class="section-subtitle">Mari berdiskusi mengenai peluang kerja, proyek web, atau kolaborasi organisasi.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="glass-card contact-info-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem;">Informasi Kontak</h3>
+            
+            <div class="contact-method" onclick="copyText('achmadhaikalfikri.14@gmail.com', 'Email')" style="cursor: pointer;">
+              <div class="contact-method-icon"><i class="ri-mail-line"></i></div>
+              <div>
+                <div class="info-label">Email (Klik untuk salin)</div>
+                <div class="info-value" id="info-email-display">achmadhaikalfikri.14@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="contact-method" onclick="copyText('+6281240000000', 'Nomor HP')" style="cursor: pointer;">
+              <div class="contact-method-icon"><i class="ri-phone-line"></i></div>
+              <div>
+                <div class="info-label">Telepon / WhatsApp</div>
+                <div class="info-value" id="info-phone-display">+62 812-4000-0000</div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="ri-map-pin-2-line"></i></div>
+              <div>
+                <div class="info-label">Lokasi Domisili</div>
+                <div class="info-value">Makassar, Sulawesi Selatan</div>
+              </div>
+            </div>
+
+            <div class="social-links-bar" id="social-links-container">
+              <a href="https://github.com/Haikals-Fikri" target="_blank" class="social-link-btn" id="social-link-github" title="GitHub Achmad Haikal Fikri"><i class="ri-github-line"></i></a>
+              <a href="https://www.linkedin.com/in/achmad-haikal-fikri" target="_blank" class="social-link-btn" id="social-link-linkedin" title="LinkedIn Achmad Haikal Fikri"><i class="ri-linkedin-line"></i></a>
+              <a href="https://x.com" target="_blank" class="social-link-btn" title="Twitter / X"><i class="ri-twitter-x-line"></i></a>
+              <a href="mailto:achmadhaikalfikri.14@gmail.com" class="social-link-btn" title="Kirim Email"><i class="ri-mail-open-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="glass-card contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem;">Kirim Pesan Langsung</h3>
+            <form onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nama Anda</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Masukkan nama Anda..." required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Alamat Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="nama@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Pesan Anda</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tuliskan pesan atau ide kolaborasi untuk Achmad Haikal Fikri..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="ri-send-plane-fill"></i> Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 <span class="user-name">Achmad Haikal Fikri</span>. Portofolio & CV Digital.</p>
+    </div>
+  </footer>
+
+
+
+  <!-- Custom JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
